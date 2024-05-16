@@ -1,0 +1,1481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Used internally for saving and loading entites">
+    <Position X="19.45" Y="3.16" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="The connection between components / events and the rest of the system cannot be modeled in a uml class diagram. &#xD;&#xA;&#xD;&#xA;Components are added and removed dynamically to entities and are processed inside the systems.&#xD;&#xA;&#xD;&#xA;Interaction between systems are decoupled via an event system">
+    <Position X="57.986" Y="21.845" Height="2.143" Width="3.228" />
+  </Comment>
+  <Class Name="Sopra.Audio.SoundDictionary">
+    <Position X="27.25" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AKAAEIAAAAAAAgoDQAAIAAgFAAAAAAAAAAAAACCQKIQ=</HashCode>
+      <FileName>Audio\SoundDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Audio.SoundManager">
+    <Position X="31.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QCYEEAAAgEAAAAgCAAAIAAhAAIAgAAAAQCIAAACACAQ=</HashCode>
+      <FileName>Audio\SoundManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mSoundDirectory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.Bits">
+    <Position X="40.25" Y="14.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IABAAAIAAAABBABAAAAYAAAAAAAAAAAgABACAABAAoA=</HashCode>
+      <FileName>ECS\Bits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.ComponentType">
+    <Position X="7.5" Y="30" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABAEAQAAAAAAEAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ECS\ComponentType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="sTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.Engine">
+    <Position X="21.5" Y="24" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAkAAgEpQAAgAIABAAAAEAAAAEAAAAAEAAAACEgAA=</HashCode>
+      <FileName>ECS\Engine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EntityManager" />
+      <Property Name="EntityFactory" />
+      <Property Name="Collision" />
+      <Property Name="PathFinder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.Entity" BaseTypeListCollapsed="true">
+    <Position X="48.25" Y="19.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAICEAAAAAAIAAAAggAABAAgAIEAACAEACAAABAAAAA=</HashCode>
+      <FileName>ECS\Entity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mComponentBits" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.ECS.EntityFactory">
+    <Position X="12" Y="32" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAACAAAAgAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mBlueprints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.EntityManager">
+    <Position X="30.75" Y="29.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Sopra.ECS.EntityManager.EntityOperation">
+        <NestedTypes>
+          <Enum Name="Sopra.ECS.EntityManager.EntityOperation.OperationType" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="Sopra.ECS.EntityManager.EntityOperationPool">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAIQEABAAAAAAADIAAAABAABAEAAAEAAAAEAAgBSAAA=</HashCode>
+      <FileName>ECS\EntityManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mEngine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.EntitySystem">
+    <Position X="66.5" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAQAIAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntitySystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mTemplate" />
+      <Field Name="mSubscription" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.IntervalEntitySystem">
+    <Position X="31" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IntervalEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.IteratingEntitySystem">
+    <Position X="61" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IteratingEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.SortingEntitySystem">
+    <Position X="112.25" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\SortingEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Subscription">
+    <Position X="43.5" Y="14.5" Width="2.5" />
+    <AssociationLine Name="mEntites" Type="Sopra.ECS.Entity" ManuallyRouted="true">
+      <Path>
+        <Point X="44.375" Y="16.373" />
+        <Point X="44.375" Y="17.454" />
+        <Point X="47.837" Y="17.454" />
+        <Point X="47.837" Y="19.65" />
+        <Point X="48.25" Y="19.65" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.196" Y="0.767" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEIACAAAEIAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\Subscription.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mTemplate" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="mEntites" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.System">
+    <Position X="64" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\System.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Template">
+    <Position X="36.75" Y="15.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAABAAAAAAAAAAAIMAAAAAAAAAAAAAAIAEAAAAAIA=</HashCode>
+      <FileName>ECS\Template.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mAll" />
+      <Field Name="mOne" />
+      <Field Name="mExclude" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Game1">
+    <Position X="52.5" Y="29" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAA0AAAAAAAAAAKgAAAECAAQAAAAAAAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mInput" />
+      <Field Name="mScreenManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Input.InputManager">
+    <Position X="48" Y="28.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>ACwAEAAAAQBCgABAACgAACBEAAAACUAAAESAABHACAA=</HashCode>
+      <FileName>Input\InputManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mKeyEvents" />
+      <Field Name="mLastMouseEvents" />
+      <Field Name="mMouseEvents" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Input.KeyEvent" BaseTypeListCollapsed="true">
+    <Position X="49" Y="36" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Input\KeyEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Input.MouseEvent" BaseTypeListCollapsed="true">
+    <Position X="48.75" Y="24.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAIAAAAAAEBAAAAAAAAAAAAAAAAAABBAAAAAA=</HashCode>
+      <FileName>Input\MouseEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Achievements.Stats">
+    <Position X="39.25" Y="26.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAaCCAAQEDAMAWAAECgBMAgACAKAgQAAAAAIEEQI=</HashCode>
+      <FileName>Logic\Achievements\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Achievements.TimerSystem">
+    <Position X="9.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Achievements\TimerSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Blueprints">
+    <Position X="6.75" Y="36.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAIAAAAgIAABAAACAAAAAAAQAAAEIYCAAAABAAg=</HashCode>
+      <FileName>Logic\Blueprints.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Logic.CameraSystem">
+    <Position X="88" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\CameraSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Boss.AutoTurretSystem">
+    <Position X="37.75" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAACAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Logic\Boss\AutoTurretSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Boss.BossKiSystem">
+    <Position X="50" Y="9.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>gQAAAAIBgAgABEQAAgAgAgQgIAAAAAgAAACBAAAiAAQ=</HashCode>
+      <FileName>Logic\Boss\BossKiSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Boss.ElectricFloorSystem">
+    <Position X="69" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Boss\ElectricFloorSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Boss.LaserTurretSystem">
+    <Position X="91" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Logic\Boss\LaserTurretSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Collision.Collisions">
+    <Position X="11.25" Y="26.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAUgAAEQAABBgAAAAAAQAAAAAAQEAAEAIAgAAIEAA=</HashCode>
+      <FileName>Logic\Collision\Collisions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mQuadTree" />
+      <Field Name="mInteractableTemplate" />
+      <Field Name="mTransformType" />
+      <Field Name="mHitboxType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Logic.Collision.HitboxDebugSystem">
+    <Position X="110.5" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Collision\HitboxDebugSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Collision.QuadObject">
+    <Position X="0.5" Y="29.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAgAAAAAAAQAAAAAAAACAAAAAAAAIAAA=</HashCode>
+      <FileName>Logic\Collision\QuadObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Collision.QuadTree">
+    <Position X="3.75" Y="29.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAQGAAAAAAAgAQAAkABAAAAANAAAAQAAAEAABAAAA=</HashCode>
+      <FileName>Logic\Collision\QuadTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mObjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Logic.Health.CorpseSystem">
+    <Position X="12.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Health\CorpseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Health.HealthSystem">
+    <Position X="97.25" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Logic\Health\HealthSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.InventoryC" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="30" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAoAAAAQACAAAAAACABAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\InventoryC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="InvSlots" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.InventorySystem">
+    <Position X="18.25" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\InventorySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Item">
+    <Position X="16.25" Y="29.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAZQIAAAAAAAAgAAIAQAAAAAAAAACBAAAAgAAAE=</HashCode>
+      <FileName>Logic\Items\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemCar">
+    <Position X="5.25" Y="34.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\ItemCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemCoffee">
+    <Position X="7.5" Y="34.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\ItemCoffee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemDrone">
+    <Position X="9.75" Y="34.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\ItemDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemLasergun">
+    <Position X="12" Y="34.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAASAAAAACAAAAAAAAAAAAAAAAAgABEAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemLasergun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemMinigun">
+    <Position X="15" Y="34.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemMinigun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemPistol">
+    <Position X="18" Y="34.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemPistol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemRifle">
+    <Position X="20.75" Y="34.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemRifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemRocketlauncher">
+    <Position X="23.5" Y="34.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemRocketlauncher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemTurretLasergun">
+    <Position X="27" Y="34.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAASAAAAACAAAAAAAAAAAAAAAAAAAAEAAAAAAgAA=</HashCode>
+      <FileName>Logic\Items\ItemTurretLasergun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.DropItemSystem">
+    <Position X="41.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\DropItemSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.ExplosionSystem">
+    <Position X="53.75" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\ExplosionSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.LaserBulletSystem">
+    <Position X="72.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAgAAAABAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\LaserBulletSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.RocketBulletSysstem">
+    <Position X="80.75" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAgAAAgAAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\RocketBulletSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.SimpleBulletSystem">
+    <Position X="94.5" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAgAAAAAAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\SimpleBulletSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.AggressiveEnemySystem">
+    <Position X="100.5" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAgAAAAAACAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\AggressiveEnemySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.CallForHelpSystem">
+    <Position X="20.75" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\CallForHelpSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.EmployeeAttackSystem">
+    <Position X="34.5" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAACAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Logic\KI\EmployeeAttackSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.EnemyDebugSystem">
+    <Position X="47" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAgAAAAACAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\EnemyDebugSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.EnemyPathFindingSystem">
+    <Position X="56.75" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgABAAAACAAAAAAAQAAAAAQAAAA=</HashCode>
+      <FileName>Logic\KI\EnemyPathFindingSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.NoiseSystem">
+    <Position X="117.25" Y="7.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>kgAAAAACAAAEAAAAAgBCAAAAAAAAAABAQAACAAAAAEA=</HashCode>
+      <FileName>Logic\KI\NoiseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.KI.ReinforcementSystem">
+    <Position X="103.75" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAIgAAAAAAAAAAACAAAAAAAAIAAAA=</HashCode>
+      <FileName>Logic\KI\ReinforcementSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.Graph">
+    <Position X="20.5" Y="37.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QCIgAAAkYAAAACgAAAAAAEAAAACBQBAAAKAIAAAAQCA=</HashCode>
+      <FileName>Logic\Pathfinding\Graph.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Nodes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.Node">
+    <Position X="17" Y="38.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAACgAAAAgAAQAAAAAQAACAiAQQIAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.PathFinder">
+    <Position X="20.5" Y="29.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAcAEACABABAAAQAAAAAgAAAAAADAAgAAAIAAAQAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\Pathfinder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mEngine" />
+      <Field Name="mCollisions" />
+      <Property Name="Graph" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.PathFindingDebugSystem">
+    <Position X="60" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\PathFindingDebugSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.PathFindingSystem">
+    <Position X="65.25" Y="9.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>QQQACAAAAAAAAAAAAgAgAAEAIBAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\PathFindiningSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.CarSystem">
+    <Position X="107.25" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAwAAAAAAAAABAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\CarSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.DroneSystem">
+    <Position X="24.25" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgwAAAAAAAAABAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\DroneSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Render.EntityDrawSystem">
+    <Position X="113.5" Y="10.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAgAACAgAACAAACAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Render\EntityDrawSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Stairs.StairSystem">
+    <Position X="83.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Stairs\StairSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.UserInput.UserInputSystem">
+    <Position X="27.5" Y="9.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAABAwAAAAABgAAFCEAAAAAAABCBAAA=</HashCode>
+      <FileName>Logic\UserInput\UserInputSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.AssassinatableSystem">
+    <Position X="44.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\AssassinatableSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.CoffeeSystem">
+    <Position X="63" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\CoffeeSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.ItemStackSystem">
+    <Position X="75.25" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\ItemStackSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.SwitchSystem">
+    <Position X="85.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\SwitchSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Maps.Layer">
+    <Position X="16" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAgAAAAAAAEQAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Maps\Layer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tiles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.Level">
+    <Position X="21.25" Y="16.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAgAAAABAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Maps\Level.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Map" />
+      <Property Name="Engine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.LevelManager">
+    <Position X="34.5" Y="30.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CgAAAQQCSAAggEABAAAIAAAEAARkgACAQQAECAAMAAA=</HashCode>
+      <FileName>Maps\LevelManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mMapFactory" />
+      <Field Name="mEntityFactory" />
+      <Field Name="mScreenManager" />
+      <Field Name="mScreenFactory" />
+      <Property Name="CurrentLevel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.Map">
+    <Position X="18.75" Y="16" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAABAAAgkEAAAAAAEQAAIAAAAAABBAAAAAAAAA=</HashCode>
+      <FileName>Maps\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mLayers" />
+      <Property Name="MapObjectList" />
+      <Property Name="WallHitboxList" />
+      <Property Name="SpawnList" />
+      <Property Name="StoryList" />
+      <Property Name="EnemyPathList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.MapFactory">
+    <Position X="35" Y="37.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAAAACABAAAAABAAggAAAAgEAAAAAAQAAAAAA=</HashCode>
+      <FileName>Maps\MapFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Maps.MapObject">
+    <Position X="11" Y="11.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAgAAEAAAAAEQAAAAAAAAAAQAAAAAAYAA=</HashCode>
+      <FileName>Maps\MapObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Maps.Tile">
+    <Position X="12.75" Y="16" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maps\Tile.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tileset" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.Tileset">
+    <Position X="9.75" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAACBAIACQAAAEAAAAAAAIAAQgAAAA=</HashCode>
+      <FileName>Maps\Tileset.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mTiles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Maps.MapComponents.ChairSystem">
+    <Position X="77.75" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maps\MapComponents\ChairSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Maps.Tutorial.StorySystem">
+    <Position X="15" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAAQAAAAA=</HashCode>
+      <FileName>Maps\Tutorial\StorySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.SaveState.EntityState" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAgAAAAACAABAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>SaveState\EntityState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mComponents" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.SaveState.State">
+    <Position X="21.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAwAAAAAAAAAAAEAIAEAEAA=</HashCode>
+      <FileName>SaveState\State.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Entities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Screens.AbstractScreen">
+    <Position X="25.75" Y="16.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAEAAAAgAAAAAAAAAAAAEAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Screens\AbstractScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.GameScreen">
+    <Position X="21.25" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAACgAAAAAAAAAgAAFQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Screens\GameScreen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mLevel" />
+      <Field Name="mMenuActions" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Screens.HudScreen">
+    <Position X="28.25" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QIQBAAIRCAACCwiABgKAIIAgAoEYBAANAACAQAAAACA=</HashCode>
+      <FileName>Screens\HudScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuActions">
+    <Position X="31.5" Y="13.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAACAAgAgKBAAAIBABBAAAAAAQAoQKoAhAAIBA=</HashCode>
+      <FileName>Screens\MenuActions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mScreenManager" />
+      <Field Name="mScreenFactory" />
+      <Field Name="mLevelManager" />
+      <Field Name="mSound" />
+      <Field Name="mStats" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.Screens.QuadScreen">
+    <Position X="41.5" Y="19.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAEAAAAIgAAwAAAAAAAAFAAABACAABAgAAAAAAAAA=</HashCode>
+      <FileName>Screens\QuadScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.ScreenManager">
+    <Position X="43" Y="29.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQEAAAAgABAAAAAgAAoAAACABABAgAAABAAAA=</HashCode>
+      <FileName>Screens\ScreenManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mInput" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="mScreens" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.Screens.TechDemoStatsScreen">
+    <Position X="44.75" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAARAAAACwAAAAIAAAAAAACAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Screens\TechDemoStatsScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.AchievementMenu">
+    <Position X="6.25" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAiAIAADAwAAQAoAwGAhgFCAAICEAAAAAANGAig=</HashCode>
+      <FileName>Screens\MenuScreens\AchievementMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.CreditsMenu">
+    <Position X="9.25" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAADAwEAAAgAgEAhAACAAACEAEAAAAISAAg=</HashCode>
+      <FileName>Screens\MenuScreens\CreditsMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.GameOverMenu">
+    <Position X="12.25" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAAwBgAAgAwEAgAACABACEACAABAACAAA=</HashCode>
+      <FileName>Screens\MenuScreens\GameOverMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.LoadingScreen">
+    <Position X="15.25" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACIAABAwAAAAgAAUAhABCAAACEACAAAAIQBAA=</HashCode>
+      <FileName>Screens\MenuScreens\LoadingScreen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.MainMenu">
+    <Position X="18.25" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAIAAAAwAgABCAiEAgAACAAACEAAEAMAICAAg=</HashCode>
+      <FileName>Screens\MenuScreens\MainMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.OptionMenu">
+    <Position X="24.75" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAIAAGC4gAABAIgMAtIACgRACEQAAAAgKSIGg=</HashCode>
+      <FileName>Screens\MenuScreens\OptionMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.PauseMenu">
+    <Position X="31.75" Y="19.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAIAAAOAAABwAAAAgIgUJgAACEAACEICAAAAISAAA=</HashCode>
+      <FileName>Screens\MenuScreens\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mMenuActions" />
+      <Field Name="mLevelManager" />
+      <Field Name="mStats" />
+      <Field Name="mPauseLabel" />
+      <Field Name="mOptionenBtn" />
+      <Field Name="mSpeichernBtn" />
+      <Field Name="mBeendenBtn" />
+      <Field Name="mSaveLabel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.StatMenu">
+    <Position X="35" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAwAEAAAKAADM4BCCAgAgFRlAAiAABCGIQAACAoSAAk=</HashCode>
+      <FileName>Screens\MenuScreens\StatMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.Screens.MenuScreens.YouWonMenu">
+    <Position X="38.5" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAAwBgACgAwEAgAACAAACEACAABAACAAA=</HashCode>
+      <FileName>Screens\MenuScreens\YouWonMenu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sopra.UI.Button">
+    <Position X="4.25" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAAhBAAACBCAAAIACAAAAAAAQgiAAAIAA=</HashCode>
+      <FileName>UI\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.UI.Label">
+    <Position X="7.25" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAgBAgAAAAAAAAACAACAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>UI\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.UI.MenuElement">
+    <Position X="6" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\MenuElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Achievements.Achievement" Collapsed="true">
+    <Position X="61.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Achievements\Achievement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Achievements.AchievementSystem" Collapsed="true">
+    <Position X="63.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Logic\Achievements\AchievementSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.DebugHelpers" Collapsed="true">
+    <Position X="73.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAEAACAAAAAA=</HashCode>
+      <FileName>Logic\DebugHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.EngineFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAgECAAQAAAAAAAAA=</HashCode>
+      <FileName>Logic\EngineFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KevinC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.75" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KevinC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.TransformC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAABAAgAAIAAAAEAEAAA=</HashCode>
+      <FileName>Logic\TransformC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserControllableC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserControllableC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.AutoTurretC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAACAAAAAAAAAAAAAgAAAAAAABAAA=</HashCode>
+      <FileName>Logic\Boss\AutoTurretC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.BossKiC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAIAACAAAAhQAAAAQAAAAAAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Logic\Boss\BossKiC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.ElectricFloorC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Boss\ElectricFloorC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.EnemySpawnC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Boss\EnemySpawnC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.LaserTurretC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAAAAAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Logic\Boss\LaserTurretC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.PlayerBlockadeC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Boss\PlayerBlockadeC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Boss.TurretSpawnC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Boss\TurretSpawnC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Collision.HitboxC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Logic\Collision\HitboxC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Collision.StaticObjectC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Collision\StaticObjectC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Collision.CollisionTypes.CollisionImpenetrableC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Collision\CollisionTypes\CollisionImpenetrableC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Collision.CollisionTypes.CollisionInaccessibleC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Collision\CollisionTypes\CollisionInaccessibleC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Collision.CollisionTypes.CollisionPlayerBlockade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Collision\CollisionTypes\CollisionPlayerBlockade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Health.CorpseC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Health\CorpseC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Health.EntityDiedE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Logic\Health\EntityDiedE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Health.HealthC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAgAACAAAAAAEEAQAAEAAEACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Health\HealthC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.ItemSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\ItemSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.LaserBulletSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAAAAgAAACAAAEAAAAAAgRA=</HashCode>
+      <FileName>Logic\Items\LaserBulletSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.RocketSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgQA=</HashCode>
+      <FileName>Logic\Items\RocketSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.SimpleBulletSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgRA=</HashCode>
+      <FileName>Logic\Items\SimpleBulletSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.DropItemC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\DropItemC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.ExplosionC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgATAAAEAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\ExplosionC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.LaserBulletC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgASAAAAACAAAAAAAIAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\LaserBulletC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.RocketBulletC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAAAAAAAAAAAIAABAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\RocketBulletC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Items.Projectiles.SimpleBulletC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAAAAAAAAAAAIAABAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Items\Projectiles\SimpleBulletC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.CallForHelp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\CallForHelp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.Employee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\Employee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.Enemy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAAEAAAAAACAAAEAAAAAgAEAAIAAAABAAAAAAA=</HashCode>
+      <FileName>Logic\KI\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.NoiseEmitter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\NoiseEmitter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.NoiseEvent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\NoiseEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.PatrollingEnemyC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\PatrollingEnemyC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.KI.ReinforcementC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAQgAAgAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\ReinforcementC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.GraphCreator" Collapsed="true">
+    <Position X="65" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAIAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\GraphCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.PathFindingC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAIAAAAAAIAAADAAAAAAgAAAAQIBAAAAABAAA=</HashCode>
+      <FileName>Logic\Pathfinding\PathFindingC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.QueueNode" Collapsed="true">
+    <Position X="65" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\QueueNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.Steering" Collapsed="true">
+    <Position X="73.75" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAEAAJAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\Steering.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Pathfinding.SteeringC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\SteeringC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.CarC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="73.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\CarC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.CarSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\CarSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.DroneC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="61.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\DroneC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.RemoteControlled.DroneSpawnE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\RemoteControlled\DroneSpawnE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Render.AnimationC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAABAAAAAIAAAAAAAAAgABABDAEAAAAAAAEAAA=</HashCode>
+      <FileName>Logic\Render\AnimationC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Render.ComplexSprite" Collapsed="true">
+    <Position X="70.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACDAAAAAAAAAABQAAACAAAAAAAABAAQAAAAAIgAQBA=</HashCode>
+      <FileName>Logic\Render\ComplexSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.Logic.Render.SimpleSpriteC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAABAAEAAAAAIgAAAA=</HashCode>
+      <FileName>Logic\Render\SimpleSpriteC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Render.SortBackToFront" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Logic\Render\SortBackToFront.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Render.SortPosUpLeftToLowRigth" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Logic\Render\SortPosUpLeftToLowRigth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Stairs.StairC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Stairs\StairC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.Stairs.UsedStair" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Stairs\UsedStair.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInput.LeftClickPressedE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInput\LeftClickPressedE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInput.LeftClickReleasedE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInput\LeftClickReleasedE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInput.RightClickPressedeE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInput\RightClickPressedeE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInput.RightClickReleasedE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="70.25" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInput\RightClickReleasedE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.AssassinatableC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="66.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\AssassinatableC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.CoffeeC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAgAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\CoffeeC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.ItemStackC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\ItemStackC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.SwitchC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="63.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\SwitchC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.Logic.UserInteractable.UserInteractableC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="72" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\UserInteractable\UserInteractableC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.ECS.Events">
+    <Position X="56.75" Y="24.25" Width="4.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Sopra.ECS.Events.EventDelegate">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\Events.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Sopra.ECS.Events.EventDelegate&lt;T&gt;">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\Events.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAQGABAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Sopra.ECS.IComponent">
+    <Position X="17.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sopra.Screens.IScreen">
+    <Position X="43.75" Y="34.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAEAAAAgAAAAAAAAAAAAEAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Screens\IScreen.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sopra.Screens.IScreenFactory">
+    <Position X="43" Y="24.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAIAAQAAAAAQhBCAAAACgAAAgAIAAAAAAE=</HashCode>
+      <FileName>Screens\ScreenFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sopra.ECS.IGameEvent" Collapsed="true">
+    <Position X="61.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IGameEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Sopra.Logic.Items.OffsetType" Collapsed="true">
+    <Position X="65" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Logic\Items\OffsetType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sopra.Logic.KI.EnemyStance" Collapsed="true">
+    <Position X="63.25" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\KI\EnemyStance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sopra.Logic.Pathfinding.CollisionTemplate" Collapsed="true">
+    <Position X="61.5" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Logic\Pathfinding\CollisionTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Sopra.ECS.Blueprint">
+    <Position X="12" Y="38.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityFactory.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

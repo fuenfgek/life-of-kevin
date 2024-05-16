@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/Konstantin Fünfgelt/Desktop/Uni Fächer/4. Semester/Softwarepraktikum/trunk/src/Projekt/Sopra/Sopra/Content/effects/effect1.fx</SourceFile>
+  <SourceTime>2018-07-12T16:23:11.7998596+02:00</SourceTime>
+  <DestFile>C:/Users/Konstantin Fünfgelt/Desktop/Uni Fächer/4. Semester/Softwarepraktikum/trunk/src/Projekt/Sopra/Sopra/Content/bin/DesktopGL/effects/effect1.xnb</DestFile>
+  <DestTime>2018-09-04T13:45:17.8655224+02:00</DestTime>
+  <Importer>EffectImporter</Importer>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <Processor>EffectProcessor</Processor>
+  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
+  <Parameters>
+    <Key>DebugMode</Key>
+    <Value>Auto</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

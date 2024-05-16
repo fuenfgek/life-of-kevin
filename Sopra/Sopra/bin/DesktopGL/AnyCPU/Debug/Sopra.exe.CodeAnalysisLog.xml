@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Konstantin Fünfgelt\Desktop\Uni Fächer\4. Semester\Softwarepraktikum\trunk\src\Projekt\Sopra\Sopra\bin\DesktopGL\AnyCPU\Debug\Sopra.exe">
+   <Modules>
+    <Module Name="sopra.exe">
+     <Namespaces>
+      <Namespace Name="Sopra.ECS">
+       <Types>
+        <Type Name="EntityManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EntitiesCleared" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Deklarieren Sie den ersten Parameter von "'Action'" als Objekt mit dem Namen "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Deklarieren Sie den zweiten Parameter von "'Action'" als EventArgs oder als Instanz eines Typs, durch den EventArgs erweitert wird, mit dem Namen "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EntityAdded" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Deklarieren Sie den ersten Parameter von "'EntityAddedDelegate'" als Objekt mit dem Namen "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Deklarieren Sie den zweiten Parameter von "'EntityAddedDelegate'" als EventArgs oder als Instanz eines Typs, durch den EventArgs erweitert wird, mit dem Namen "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EntityModified" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Deklarieren Sie den ersten Parameter von "'EntityModifiedDelegate'" als Objekt mit dem Namen "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Deklarieren Sie den zweiten Parameter von "'EntityModifiedDelegate'" als EventArgs oder als Instanz eines Typs, durch den EventArgs erweitert wird, mit dem Namen "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EntityRemoved" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Deklarieren Sie den ersten Parameter von "'EntityRemovedDelegate'" als Objekt mit dem Namen "sender".</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Deklarieren Sie den zweiten Parameter von "'EntityRemovedDelegate'" als EventArgs oder als Instanz eines Typs, durch den EventArgs erweitert wird, mit dem Namen "e".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerialzableDictionary`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">Fügen Sie 'SerialzableDictionary&lt;TKey, TValue&gt;' [Serializable] hinzu, da dieser Typ ISerializable implementiert.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Sopra.Logic.Achievements">
+       <Types>
+        <Type Name="Stats" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Save(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Objekte nicht mehrmals verwerfen" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Konstantin Fünfgelt\Desktop\Uni Fächer\4. Semester\Softwarepraktikum\trunk\src\Projekt\Sopra\Sopra\Logic\Achievements" File="Stats.cs" Line="170">Das Objekt "'stream'" kann mehrere Male in der 'Stats.Save(string)'-Methode verworfen werden. Um zu verhindern, dass eine System.ObjectDisposedException generiert wird, sollten Sie die Dispose-Methode nur einmal für ein Objekt aufrufen.: Lines: 170</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Sopra.SaveState">
+       <Types>
+        <Type Name="State" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Save(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Objekte nicht mehrmals verwerfen" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-05-06 12:44:34Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Konstantin Fünfgelt\Desktop\Uni Fächer\4. Semester\Softwarepraktikum\trunk\src\Projekt\Sopra\Sopra\SaveState" File="State.cs" Line="22">Das Objekt "'stream'" kann mehrere Male in der 'State.Save(string)'-Methode verworfen werden. Um zu verhindern, dass eine System.ObjectDisposedException generiert wird, sollten Sie die Dispose-Methode nur einmal für ein Objekt aufrufen.: Lines: 22</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Ereignishandler korrekt deklarieren</Name>
+   <Description>Gemäß der Konvention weisen .NET-Ereignisse zwei Parameter auf, die den Absender des Ereignisses und die Ereignisdaten angeben. Ereignishandlersignaturen sollten folgendes Format aufweisen: void MyEventHandler(object sender, EventArgs e). Der sender-Parameter weist immer den Typ "System.Object" auf, selbst wenn ein spezifischerer Typ verwendet werden kann. Der e-Parameter weist immer den Typ "System.EventArgs" auf. Ereignisse, die keine Ereignisdaten bereitstellen, sollten den Delegattypen "System.EventHandler" verwenden. Ereignishandler geben "void" zurück, damit jedes Ereignis an mehrere Zielmethoden gesendet werden kann. Alle von einem Ziel zurückgegebenen Werte würden nach dem ersten Aufruf verloren gehen.</Description>
+   <Resolution Name="First">Deklarieren Sie den ersten Parameter von "{0}" als Objekt mit dem Namen "sender".</Resolution>
+   <Resolution Name="Second">Deklarieren Sie den zweiten Parameter von "{0}" als EventArgs oder als Instanz eines Typs, durch den EventArgs erweitert wird, mit dem Namen "e".</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>ISerializable-Typen mit SerializableAttribute markieren</Name>
+   <Description>Die System.Runtime.Serialization.ISerializable-Schnittstelle lässt zu, dass der Typ seine Serialisierung anpasst, während das Serializable-Attribut es der Common Language Runtime ermöglicht, den Typ als serialisierbar zu erkennen.</Description>
+   <Resolution Name="Default">Fügen Sie {0} [Serializable] hinzu, da dieser Typ ISerializable implementiert.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Objekte nicht mehrmals verwerfen" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Objekte nicht mehrmals verwerfen</Name>
+   <Description>Eine ordnungsgemäß implementierte Dispose-Methode kann mehrere Male aufgerufen werden, ohne dass eine Ausnahme ausgelöst wird. Dies ist jedoch nicht garantiert. Um zu verhindern, dass eine System.ObjectDisposedException generiert wird, sollten Sie die Dispose-Methode nur einmal für ein Objekt aufrufen.</Description>
+   <Resolution Name="Default">Das Objekt "{0}" kann mehrere Male in der {1}-Methode verworfen werden. Um zu verhindern, dass eine System.ObjectDisposedException generiert wird, sollten Sie die Dispose-Methode nur einmal für ein Objekt aufrufen.: Lines: 22</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Kategorie</String>
+  <String Key="Certainty">Sicherheit</String>
+  <String Key="CollapseAll">Alle reduzieren</String>
+  <String Key="CheckId">Prüf-ID</String>
+  <String Key="Error">Fehler</String>
+  <String Key="Errors">Fehler</String>
+  <String Key="ExpandAll">Alle erweitern</String>
+  <String Key="Help">Hilfe</String>
+  <String Key="Line">Zeile</String>
+  <String Key="Messages">Meldung(en)</String>
+  <String Key="LocationNotStoredInPdb">[Nicht in PDB gespeicherter Speicherort]</String>
+  <String Key="Project">Projekt</String>
+  <String Key="Resolution">Auflösung</String>
+  <String Key="Rule">Regel</String>
+  <String Key="RuleFile">Regeldatei</String>
+  <String Key="RuleDescription">Regelbeschreibung</String>
+  <String Key="Source">Quelle</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Ziel</String>
+  <String Key="Warning">Warnung</String>
+  <String Key="Warnings">Warnung(en)</String>
+  <String Key="ReportTitle">Codeanalysebericht</String>
+ </Localized>
+</FxCopReport>

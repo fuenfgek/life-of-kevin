@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="The components (IComponent) of an entity are stored in a bag.&#xD;&#xA;A component can be retrieved via its index (see ComponentType)">
+    <Position X="13.09" Y="13.475" Height="1.121" Width="2.335" />
+  </Comment>
+  <Comment CommentText="For each component a unique index is generated at runtime. This is used as an unique identifier">
+    <Position X="7.75" Y="14.25" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="component &quot;fingerprint&quot; of an entity.&#xD;&#xA;Used for fast checks if an entity has specific components">
+    <Position X="14.238" Y="23.194" Height="1.361" Width="2.574" />
+  </Comment>
+  <Comment CommentText="Templates are used to filter entities based on their components.&#xD;&#xA;">
+    <Position X="9.28" Y="19.352" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Builder pattern for templates.&#xD;&#xA;&#xD;&#xA;">
+    <Position X="5.905" Y="19.656" Height="0.629" Width="2.003" />
+  </Comment>
+  <Comment CommentText="Pool pattern to reduce garbage">
+    <Position X="27.18" Y="9.372" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Provide fast access to a subset of entities matching a given template">
+    <Position X="19.356" Y="3.481" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Publish / subscribe pattern. Used to decouple systems">
+    <Position X="32.235" Y="11.795" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Used to notify subscriptions">
+    <Position X="27.472" Y="4.002" Height="0.362" Width="1.906" />
+  </Comment>
+  <Comment CommentText="Base type for all components">
+    <Position X="12.531" Y="12.002" Height="0.347" Width="2.18" />
+  </Comment>
+  <Comment CommentText="The Engine is registered as a singelten.&#xD;&#xA;&#xD;&#xA;Instead of injection Pathfinder and Collisions manually into each system, they can be accessed via the engine">
+    <Position X="22.159" Y="19.289" Height="1.082" Width="3.82" />
+  </Comment>
+  <Class Name="Sopra.ECS.Bag&lt;T&gt;">
+    <Position X="12.5" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAABAAAAhABAEAAABAAAAAAAAAAAAAgAAABBAAA=</HashCode>
+      <FileName>ECS\Bag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Bits">
+    <Position X="16.75" Y="20" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IABAAAIAAAABBABAAAAYAAAAAAAAAAAgABACAABAAoA=</HashCode>
+      <FileName>ECS\Bits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.ComponentType">
+    <Position X="7.75" Y="15.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABAEAQAAAAAAEAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ECS\ComponentType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="sTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.Engine">
+    <Position X="21.5" Y="14.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAwAkAAgEpQAAgAIABAAAAEAAAAEAAAAAEAAAACEgAA=</HashCode>
+      <FileName>ECS\Engine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mRenderSystems" />
+      <Field Name="mSystems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.Entity" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="14.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAICEAAAAAAIAAAAggAABAAgAIEAACAEACAAABAAAAA=</HashCode>
+      <FileName>ECS\Entity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mComponents" />
+      <Field Name="mEntityManager" />
+      <Field Name="mEngine" />
+      <Field Name="mComponentBits" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sopra.ECS.EntityFactory">
+    <Position X="12.25" Y="7.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAACAAAAgAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="mBlueprints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.EntityManager">
+    <Position X="21.25" Y="3.25" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Sopra.ECS.EntityManager.EntityOperation">
+        <NestedTypes>
+          <Enum Name="Sopra.ECS.EntityManager.EntityOperation.OperationType" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="Sopra.ECS.EntityManager.EntityOperationPool">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\EntityManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAIQEABAAAAAAADIAAAABAABAEAAAEAAAAEAAgBSAAA=</HashCode>
+      <FileName>ECS\EntityManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mEngine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.EntitySystem">
+    <Position X="28.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAQAIAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Events">
+    <Position X="30.5" Y="8.5" Width="4.75" />
+    <NestedTypes>
+      <Delegate Name="Sopra.ECS.Events.EventDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\Events.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Sopra.ECS.Events.EventDelegate&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ECS\Events.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAQGABAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.IntervalEntitySystem">
+    <Position X="24" Y="24" Width="4" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IntervalEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.IteratingEntitySystem">
+    <Position X="24" Y="21.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IteratingEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Pool&lt;T&gt;">
+    <Position X="25.5" Y="10.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABEABIAAAAAAAAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>ECS\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.SortingEntitySystem">
+    <Position X="28.75" Y="21.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\SortingEntitySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Subscription">
+    <Position X="16" Y="11.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEIACAAAEIAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\Subscription.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mTemplate" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="mEntites" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.System">
+    <Position X="28.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ECS\System.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sopra.ECS.Template">
+    <Position X="8.5" Y="20.25" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAABAAAAAAAAAAAIMAAAAAAAAAAAAAAIAEAAAAAIA=</HashCode>
+      <FileName>ECS\Template.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mAll" />
+      <Field Name="mExclude" />
+      <Field Name="mOne" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sopra.ECS.TemplateBuilder">
+    <Position X="4.75" Y="20.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAQAAgAAAAIAAAAAAQKA=</HashCode>
+      <FileName>ECS\TemplateBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Sopra.ECS.IComponent">
+    <Position X="12.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sopra.ECS.IGameEvent" Collapsed="true">
+    <Position X="30.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IGameEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sopra.ECS.IPoolable">
+    <Position X="25.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\IPoolable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="Sopra.ECS.Blueprint">
+    <Position X="13" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityFactory.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Sopra.ECS.EntityRemovedDelegate" Collapsed="true">
+    <Position X="25.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Sopra.ECS.EntityAddedDelegate" Collapsed="true">
+    <Position X="25.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Sopra.ECS.EntityModifiedDelegate" Collapsed="true">
+    <Position X="25.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ECS\EntityManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
